@@ -49,6 +49,6 @@ do
 	#echo $MS
 	SUM=$(expr $MS + $SUM)
 done
-echo $(awk -v var1=$SUM -v var2=$NUM_EXPS 'BEGIN { print  ( var1 / var2 ) }')
+echo "Average resolution time: " $(awk -v var1=$SUM -v var2=$NUM_EXPS 'BEGIN { print  ( var1 / var2 ) }')
 #echo $(echo "scale = 4; $SUM / $NUM_EXPS" | bc)
 
