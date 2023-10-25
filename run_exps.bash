@@ -22,7 +22,7 @@ then
 		while [[ $FILESIZE -le 830 ]]
 		do
 			fails=$(expr $fails + 1)
-			if [[ $fails -ge 3 ]]
+			if [[ $fails -ge 1 ]]
 			then
 				echo "Hit max retrys for run $i"
 				echo "Hit max retrys for run $i" >> ../failed.log
