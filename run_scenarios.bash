@@ -43,7 +43,7 @@ do
 			fi
 		fi
 
-		./run_exps.bash 0 1000 | tee scratch.log
+		./run_exps.bash 0 100 | tee scratch.log
 		echo "$ALG"_"$UDPSIZE"": " $(tail -n 1 scratch.log) >> results_summary.log
 		rm scratch.log
 		cd $BUILDDIR/dig_logs
