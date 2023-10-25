@@ -47,7 +47,7 @@ do
 		echo "$ALG"_"$UDPSIZE"": " $(tail -n 1 scratch.log) >> results_summary.log
 		rm scratch.log
 		cd $BUILDDIR/dig_logs
-		tar -cvf "X86_64_""$ALG"_"$UDPSIZE"".tar" *
+		tar -cvf "X86_64_""$ALG"_"$UDPSIZE"".tar" * > /dev/null 2>&1
 		mv  "X86_64_""$ALG"_"$UDPSIZE"".tar" $OUTPUTDIR
 	done
 done
