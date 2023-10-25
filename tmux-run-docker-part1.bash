@@ -57,4 +57,5 @@ do
 	tmux send-keys -t docker-bind:0.1 -R Enter
 	tmux clear-history -t docker-bind:0.1
 	grep -i 'SERVFAIL' setup.log > /dev/null
+ 	export FILESIZE=$(wc -c setup.log | cut -d ' ' -f 1)
 done
