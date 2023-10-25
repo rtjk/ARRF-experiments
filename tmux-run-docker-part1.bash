@@ -20,8 +20,11 @@ tmux capture-pane -t docker-bind:0.1 -pS - > setup.log
 tmux send-keys -t docker-bind:0.1 -R Enter
 tmux clear-history -t docker-bind:0.1
 grep -i 'SERVFAIL' setup.log > /dev/null
-while [[ $? == 0 ]]
+#while [[ $? == 0 ]]
+export FILESIZE=$(wc -c setup.log | cut -d ' ' -f 1)
+while [[ $FILESIZE -le 830 ]]
 do
+	echo "FILESIZE=$FILESIZE"
 	echo "Trying again..."
 	tmux send-keys -t docker-bind:0.1 'exit' Enter
 	#tmux select-pane -t 0
