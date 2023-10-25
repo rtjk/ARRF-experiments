@@ -44,7 +44,7 @@ fi
 export SUM=0
 for i in $(seq $1 $(expr $2 - 1))
 do
-	echo $i
+	#echo $i
 	export MS=$(grep 'Query time: ' dig_logs/run_$i.log | cut -d ' ' -f 4)
 	#echo $MS
 	SUM=$(expr $MS + $SUM)
