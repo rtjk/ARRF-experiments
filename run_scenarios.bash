@@ -1,8 +1,8 @@
 #! /bin/bash
 
-export OUTPUTDIR="$(pwd)/x86_res/sequential/100ms_50mbps"
-export UDPSIZES="1232"
-export ALGS="FALCON512"
+export OUTPUTDIR="$(pwd)/result"
+export UDPSIZES="$1"
+export ALGS="$2"
 export BUILDDIR="$(pwd)/build"
 export WORKINGDIR="$(pwd)"
 mkdir -p $OUTPUTDIR
