@@ -50,3 +50,4 @@ do
 	SUM=$(expr $MS + $SUM)
 done
 echo $(echo "scale = 4; $SUM / $NUM_EXPS" | bc)
+
