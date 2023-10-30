@@ -38,6 +38,7 @@ do
 	tmux has-session -t docker-bind 2> /dev/null > /dev/null
 	while [[ $? == 0 ]]
 	do
+ 		echo -n "."
 		tmux send-keys -t docker-bind:0.0 '^c'
 		sleep 15
 		tmux has-session -t docker-bind 2> /dev/null > /dev/null
