@@ -21,6 +21,7 @@ tmux send-keys -t docker-bind:0.1 -R Enter
 tmux clear-history -t docker-bind:0.1
 grep -i 'SERVFAIL' setup.log > /dev/null
 #while [[ $? == 0 ]]
+echo "---- START setup.log"
 export FILESIZE=$(wc -c setup.log | cut -d ' ' -f 1)
 while [[ $FILESIZE -le 830 ]]
 do
@@ -59,3 +60,4 @@ do
 	grep -i 'SERVFAIL' setup.log > /dev/null
  	export FILESIZE=$(wc -c setup.log | cut -d ' ' -f 1)
 done
+echo "---- END setup.log"
