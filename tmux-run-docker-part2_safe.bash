@@ -5,4 +5,4 @@
 #tmux capture-pane -t docker-bind:0.1 -pS - > dig_logs/run_$1.log
 #tmux send-keys -t docker-bind:0.1 -R Enter
 #tmux clear-history -t docker-bind:0.1
-echo "xxxxxxxxxxxxxx ERROR xxxxxxxxxxxxxx"
+echo "xxxxxxxxxxxxxx ERROR SAFE2 xxxxxxxxxxxxxx"
